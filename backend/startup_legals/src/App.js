@@ -5,9 +5,10 @@ import { Link } from 'react-router-dom';
 function App() {
   return (
     <div className="App">
-      <h2 id='login'><Link to='/login'>Log in</Link></h2>
+
 
       <header className="App-header">
+      <h2 id='login'><Link to='/login'>Log in</Link></h2>
         <h1>
           Startup Legals
         </h1>
