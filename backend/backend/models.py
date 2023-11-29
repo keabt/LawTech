@@ -20,5 +20,16 @@ class USER(models.Model):
 
     def __str__(self):
         return self.name
+    # Contract schema - Foreign key is not working
+    class CONTRACT(models.Model): 
+        title = models.CharField(max_length=200)
+        offeree = models.ForeignKey(USER, on_delete=models.CASCADE)
+        start_date = models.DateField()
+        end_date = models.DateField()
+
+        def __str__(self):
+            return self.name
+        
+
 
 

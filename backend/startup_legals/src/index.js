@@ -2,9 +2,10 @@ import React, { createContext } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import Home from './pages/Home';
-import Login  from './pages/Login';
-import CreateContract from './pages/CreateContract';
+import Home from './pages/Home/Home';
+import Login  from './pages/Login/Login';
+import CreateContract from './pages/CreateContract/CreateContract';
+import Register from './pages/Register/Register'
 
 import reportWebVitals from './reportWebVitals';
 import {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login/>,
+  },
+  {
+    path: "/register",
+    element: <Register/>
   },
   {
     path: "/create_contract",
