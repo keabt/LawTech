@@ -1,10 +1,10 @@
 import React, { createContext } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import Home from './pages/Home';
-import Login  from './pages/Login';
-import CreateContract from './pages/CreateContract';
+import Home from './pages/Home/Home';
+import Login  from './pages/Login/Login';
+import CreateContract from './pages/CreateContract/CreateContract';
+import Register from './pages/Register/Register'
 
 import reportWebVitals from './reportWebVitals';
 import {
@@ -15,12 +15,9 @@ import {
 
 
 const router = createBrowserRouter([
+
   {
     path: "/",
-    element: <App/>,
-  },
-  {
-    path: "/home",
     element: <Home/>,
   },
   {
@@ -31,6 +28,10 @@ const router = createBrowserRouter([
     path: "/create_contract",
     element: <CreateContract/>,
   },
+  {
+    path: "/register",
+    element: <Register/>
+  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
