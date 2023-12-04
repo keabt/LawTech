@@ -12,6 +12,8 @@ import {
   Form,
   RouterProvider,
 } from "react-router-dom";
+import SignContract from './pages/SignContract/SignContract';
+import Test from './Test';
 
 
 const router = createBrowserRouter([
@@ -31,6 +33,14 @@ const router = createBrowserRouter([
   {
     path: "/register",
     element: <Register/>
+  },
+  {
+    path: "/sign",
+    element: <SignContract/>
+  },
+  {
+    path: "/test",
+    element: <Test/>
   }
 ]);
 
