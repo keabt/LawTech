@@ -4,6 +4,7 @@ import './index.css';
 import Home from './pages/Home/Home';
 import Login  from './pages/Login/Login';
 import CreateContract from './pages/CreateContract/CreateContract';
+import Dashboard from './pages/Dashboard/Dashboard'
 import SignUp from './pages/SignUp/SignUp';
 
 import reportWebVitals from './reportWebVitals';
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: "/create_contract",
     element: <CreateContract/>,
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard />
   },
   {
     path: "/signUp",
