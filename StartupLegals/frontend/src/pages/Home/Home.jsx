@@ -43,7 +43,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 
-const pages = ['Register', 'Login'];
+const pages = ['SignUp', 'Login'];
 const settings = ['Profile', 'Account'];
 
 export default function Home() {
