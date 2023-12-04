@@ -4,7 +4,7 @@ import './index.css';
 import Home from './pages/Home/Home';
 import Login  from './pages/Login/Login';
 import CreateContract from './pages/CreateContract/CreateContract';
-import Register from './pages/Register/Register'
+import Register from './pages/Register/SignUp'
 
 import reportWebVitals from './reportWebVitals';
 import {
@@ -30,10 +30,6 @@ const router = createBrowserRouter([
   },
   {
     path: "/register",
-    element: <Register/>
-  },
-  {
-    path: "/signup",
     element: <Register/>
   }
 ]);
