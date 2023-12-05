@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views.decorators.csrf import csrf_exempt
 
-from .serializers import ContractSerializer, GameSerializer, GamerSerializer
+from .serializers import ContractGamesSerializer, ContractSerializer, GameSerializer, GamerSerializer
 from .models import Contract, Gamer, Game, ContractGames
 from django.http import JsonResponse
 from rest_framework.decorators import api_view
@@ -66,8 +66,18 @@ def game_detail(request, pk):
         serializer = GameSerializer(game)
         return Response(serializer)
 
-    
 
+def contractGames_list(request):
+    if request.method == 'GET':
+        contractGames = ContractGames.objects.all()
+        serializer = ContractGamesSerializer(contractGames, many=True)
+        return Response(serializer)
+
+def contractGames_detail(request, pk):
+    if request.method == 'GET':
+        contractGames = get_object_or_404(contractGames)
+        serializer = ContractGamesSerializer(contractGames)
+        return Response(serializer)
 # Information
     # list - Displays a list of all object instances
     # detail - Displays details of a specific object instance
