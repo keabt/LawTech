@@ -31,10 +31,7 @@ const router = createBrowserRouter([
     path: "/create_contract",
     element: <CreateContract/>,
   },
-  {
-    path: "/register",
-    element: <Register/>
-  },
+
   {
     path: "/sign",
     element: <SignContract/>
