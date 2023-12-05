@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views.decorators.csrf import csrf_exempt
 
-from StartupLegals.generateContract.serializers import ContractSerializer, GameSerializer, GamerSerializer
+from .serializers import ContractSerializer, GameSerializer, GamerSerializer
 from .models import Contract, Gamer, Game, ContractGames
 from django.http import JsonResponse
 from rest_framework.decorators import api_view
@@ -11,7 +11,7 @@ from rest_framework.response import Response
 @api_view(['GET', 'POST'])
 def contract_list(request):
     if request.method == 'GET':
-        contracts = Contract.onjects.all()
+        contracts = Contract.objects.all()
         serializer = ContractSerializer(contracts, many=True)
         return Response(serializer.data)
     elif request.method == 'POST':

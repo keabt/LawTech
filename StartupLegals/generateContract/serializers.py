@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Contract, Gamer, Game, ContractGame
+from .models import Contract, ContractGames, Gamer, Game, ContractGames
 
 class ContractSerializer(serializers.ModelSerializer):
     class Meta:
@@ -18,5 +18,5 @@ class GameSerializer(serializers.ModelSerializer):
 
 class ContractGamesSerializer(serializers.ModelSerializer):
     class Meta:
-        model = ContractGame
+        model = ContractGames
         fields = '__all__'
