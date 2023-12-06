@@ -10,8 +10,10 @@ import Button from "@mui/material/Button";
 import dayjs from "dayjs";
 import "./CreateContract.css";
 
+
 function CreateContract() {
   const [currentPage, setCurrentPage] = useState(0);
+
 
   const [personInfo, setPersonInfo] = useState({
     name: "",
@@ -106,6 +108,11 @@ function CreateContract() {
       console.log("Some fields are empty:", contractInfo);
     }
   };
+
+  const takeToSign = () => {
+    const url = 'http://localhost:3000/sign';
+    window.open(url, '_blank');
+};
 
   return (
     <div className="contract-page">
@@ -332,7 +339,7 @@ function CreateContract() {
                   />
                 </LocalizationProvider>
               </div>
-              <Button type="submit" variant="outlined" size="large">
+              <Button type="submit" variant="outlined" size="large" onClick={takeToSign}>
                 sign
               </Button>
             </Box>
