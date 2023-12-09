@@ -38,8 +38,8 @@ const CustomAppBar = () =>{
         <AppBar position="static">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-                    <Typography
+                    {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
+                    {/* <Typography
                         variant="h6"
                         noWrap
                         component="a"
@@ -54,8 +54,9 @@ const CustomAppBar = () =>{
                             textDecoration: 'none',
                         }}
                     >
-                        LOGO
-                    </Typography>
+                     
+                    </Typography> */}
+                    <img src="/logo.png" style={{height: '100px', width: '135px'}}/>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
