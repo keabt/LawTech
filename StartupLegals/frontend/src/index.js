@@ -12,6 +12,8 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import SignContract from './pages/SignContract/SignContract';
+import Test from './Test';
 
 
 const router = createBrowserRouter([
@@ -28,7 +30,16 @@ const router = createBrowserRouter([
     path: "/create_contract",
     element: <CreateContract/>,
   },
+
   {
+    path: "/sign",
+    element: <SignContract/>
+  },
+  {
+    path: "/test",
+    element: <Test/>
+  },
+{
     path: "/dashboard",
     element: <Dashboard />
   },

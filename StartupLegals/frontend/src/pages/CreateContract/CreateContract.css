@@ -1,34 +1,55 @@
 
-.contract-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 20px; /* Space for top bar */
-  }
-  
-  .top-bar {
-    width: 100%;
-    padding: 10px 0;
-    background-color: #333;
-    color: white;
-    text-align: center;
-  }
-  
 
-  
-  .carousel-container {
-    width: 50%;
-    margin-top: 20px;
-  }
-  
-  .carousel-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    height: 400px; 
-  }
-  
+
+.contract-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0; 
+  height: 500px;
+  width: 550px;
+}
+
+
+
+
+.carousel-container {
+  width: 100%;
+  margin-top: 40%;
+  margin-left: 150%;
+
+}
+
+.carousel-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin-top: 0;
+
+  box-shadow: 10% green;
+  border: 3px solid black;
+  border-radius: 5px;
+  background-color: #fff;
+  height: 500px; 
+  width: 550px;
+  border-radius: 5%;
+
+}
+/* 
+
+.carousel .control-dots {
+top: 0;
+}
+
+.carousel .control-dots .dot {
+width: 20px;
+height: 20px;
+margin-right: 50px;
+}
+
+.carousel .control-dots .dot.selected,
+.carousel .control-dots .dot:hover {
+background: black;
+
+} */
