@@ -1,47 +1,53 @@
 
 
+.AppBar {
+  width: 100%; /* Ensure AppBar spans the entire width */
+}
+
+
+
+
 
 .contract-page {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 0; 
-  height: 500px;
-  width: 550px;
+  height: 100vh; /* Set height to 100% of the viewport height */
 }
 
 
 
 
 .carousel-container {
-  width: 100%;
-  margin-top: 40%;
-  margin-left: 150%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  height: 100%;
 
 }
 
 .carousel-page {
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 0;
-  margin-top: 0;
-
+margin-left: 10%;
   box-shadow: 10% green;
-  border: 3px solid black;
+  border: 3px solid rgb(79, 79, 239);
   border-radius: 5px;
   background-color: #fff;
-  height: 500px; 
-  width: 550px;
+  height: 100%;
+  width: 80%;
   border-radius: 5%;
-
 }
-/* 
+
+
+
 
 .carousel .control-dots {
 top: 0;
 }
-
+/* 
 .carousel .control-dots .dot {
 width: 20px;
 height: 20px;

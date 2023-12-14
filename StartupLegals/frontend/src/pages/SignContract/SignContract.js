@@ -30,6 +30,10 @@ function SignContract() {
         link.click();
         document.body.removeChild(link);
       };
+      const takeToPdf = () => {
+        const url = 'http://localhost:3000/test';
+        window.open(url, '_blank');
+    };
   
     return (
       <div className={styles.container}>
@@ -51,6 +55,9 @@ function SignContract() {
         </Button>
         <Button id='buttonSave' variant="outlined" className={styles.buttons} onClick={saveSignature}>
             Save Signature
+          </Button>
+          <Button id='buttonSave' variant="outlined" className={styles.buttons} onClick={takeToPdf}>
+            next 
           </Button>
         </div>
         {trimmedDataURL ? (

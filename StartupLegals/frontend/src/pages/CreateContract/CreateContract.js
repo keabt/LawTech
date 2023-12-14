@@ -9,6 +9,14 @@ import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import Button from "@mui/material/Button";
 import dayjs from "dayjs";
 import "./CreateContract.css";
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+
+
+import Container from '@mui/material/Container';
+
+
 
 function CreateContract() {
   const [currentPage, setCurrentPage] = useState(0);
@@ -107,8 +115,63 @@ function CreateContract() {
     }
   };
 
+  const takeToSign = () => {
+    const url = 'http://localhost:3000/sign';
+    window.open(url, '_blank');
+};
+const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+  };
+  const handleOpenUserMenu = (event) => {
+    setAnchorElUser(event.currentTarget);
+  };
+
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
+
+  const handleCloseUserMenu = () => {
+    setAnchorElUser(null);
+  };
+
+
   return (
+    
     <div className="contract-page">
+      <AppBar position="static">
+      <Container maxWidth="xl">
+        <Toolbar disableGutters>
+          <Typography
+            variant="h6"
+            noWrap
+            component="a"
+            href="create"
+            sx={{
+              mr: 2,
+              display: { xs: 'none', md: 'flex' },
+              fontFamily: 'monospace',
+              fontWeight: 700,
+              letterSpacing: '.3rem',
+              color: 'inherit',
+              textDecoration: 'none',
+            }}
+          >
+            Name
+          </Typography>
+      
+
+          
+         
+          
+
+        </Toolbar>
+      </Container>
+    </AppBar>
+  <Typography variant="h3">Create Contract</Typography>
+ 
       <div className="carousel-container">
         <Carousel
           showArrows={false}
@@ -332,7 +395,7 @@ function CreateContract() {
                   />
                 </LocalizationProvider>
               </div>
-              <Button type="submit" variant="outlined" size="large">
+              <Button type="submit" variant="outlined" size="large" onClick={takeToSign}>
                 sign
               </Button>
             </Box>
